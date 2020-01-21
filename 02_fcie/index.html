@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <title>GAMČA | Kvinta - python</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        Programovanie v pythone - funkcie
+        <span class="subtitle">GAMČA | Kvinta</span>
+      </h1>
+      <span class="date">2. 10. 2019</span>
+    </header>
+
+    <section>
+      <ol>
+        <li class="mandatory">
+          Nakresli obrázok <em>mesiac a more</em>:
+          <img src="./steps/01/1.png" alt="úloha 1" />
+
+          <ul>
+            <li>
+              Zadefinuj si na to funkciu so vstupnými parametrami:
+              <code>
+                def mesiac(x, y, pozadie='white'): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;...
+              </code>
+            </li>
+            <li>
+              Mesiac nech sa nakreslí vždy v <strong>náhodnej výške</strong> nad
+              hladinou, ale nie nalepený na hladinu, ani na horný okraj obrázka
+              (estetický padding je ľubovoľný, niečo rozumné)
+            </li>
+            <li>
+              Odraz mesiaca na hladine korešponduje s výškou mesiaca na oblohe
+            </li>
+          </ul>
+        </li>
+
+        <li class="mandatory">
+          Do obrázku dokresli <em>vlajku</em>:
+          <img src="./steps/01/2.png" alt="úloha 2" />
+        </li>
+
+        <li class="mandatory">
+          Do obrázku dokresli <em>ďalšiu vlajku</em>:
+          <img src="./steps/01/3.png" alt="úloha 3" />
+
+          <ul>
+            <li>
+              Pravdepodobne je rozumné kreslenie vlajky extrahovať do funkcie:
+              <code>
+                def vlajka(x, y, farba='darkgreen'): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;...
+              </code>
+            </li>
+          </ul>
+        </li>
+
+        <li class="mandatory">
+          Na zelenú vlajku dokresli <em>červený mesiac</em>:
+          <img src="./steps/01/4.png" alt="úloha 4" />
+
+          <ul>
+            <li>
+              Mesiac na vlajke nech má inú <strong>farbu</strong> ako mesiac na
+              oblohe
+            </li>
+            <li>
+              Mesiac na vlajke nech má inú <strong>veľkosť</strong> ako mesiac
+              na oblohe
+            </li>
+            <li>
+              Pravdepodobne je rozumné upraviť funkciu mesiac a jej vstupné
+              parametre:
+              <code>
+                def mesiac(x, y, r=50, farba='yellow', pozadie='white'): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;...
+              </code>
+            </li>
+          </ul>
+        </li>
+
+        <li class="mandatory">
+          Na červenú vlajku dokresli <em>logo - dvojitý mesiac</em>:
+          <img src="./steps/01/5.png" alt="úloha 5" />
+
+          <ul>
+            <li>Logo nech má nastaviteľnú <strong>farbu</strong></li>
+            <li>Logo nech má nastaviteľnú <strong>veľkosť</strong></li>
+            <li>
+              Pravdepodobne je rozumné využiť už hotovú funkciu mesiac na
+              inšpiráciu a zadefinovať ďalšiu veľmi podobnú funkciu
+              mesiac_obrateny
+              <code>
+                def mesiac_obrateny(x, y, r=50, farba='yellow',
+                pozadie='white'): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;...
+              </code>
+            </li>
+            <li>
+              Funkcie mesiac a mesiac_obrateny ďalej použi vo funkcií logo:
+              <code>
+                def logo(x, y, r=50, farba='light sky blue', pozadie='saddle
+                brown'): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;mesiac(...) <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;mesiac_obrateny(...)
+              </code>
+            </li>
+          </ul>
+        </li>
+
+        <li class="mandatory">
+          Do obrázku dokresli <em>loďku</em>:
+          <img src="./steps/01/6.png" alt="úloha 6" />
+        </li>
+
+        <li class="mandatory">
+          Nakresli <em>námornú flotilu</em>:
+          <img src="./steps/01/7.png" alt="úloha 7" />
+
+          <ul>
+            <li>
+              Kreslenie loďky extrahuj do funkcie:
+              <code>
+                def lodka(x, y, velkost): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;...
+              </code>
+            </li>
+            <li>
+              Parameter <strong>velkost</strong> škáluje všetky rozmery v loďke
+              (napr. aj hrúbku stožiara)
+            </li>
+            <li>
+              počet lodiek (minimálne 3) aj rozostupy sú voliteľné, avšak
+              (povinne) loďky treba nakresliť pomocou
+              <strong>for&nbsp;cyklu</strong>
+            </li>
+          </ul>
+        </li>
+
+        <li class="mandatory">
+          Na loďky dokresli <em>logo - dvojitý mesiac</em>:
+          <img src="./steps/01/8.png" alt="úloha 8" />
+
+          <ul>
+            <li>
+              Uprav funkciu lodka, v jej tele zavolaj funkciu logo s vhodnými
+              parametrami:
+              <code>
+                def lodka(x, y, velkost): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;... <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;logo(...)
+              </code>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          Nakresli obrázok <em>n-uholníkové kvety</em>:
+          <img src="./steps/02/1.png" alt="úloha 9" />
+
+          <ul>
+            <li>
+              Zadefinuj funkciu n_kvet so vstupnými parametrami:
+              <code>
+                def n_kvet(x, y, n=3, r=50): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;...
+              </code>
+            </li>
+            <li>
+              Pomocou <strong>for&nbsp;cyklu</strong> nakresli kvety do radu:
+              <code>
+                for n in range(1, 7): <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;n_kvet(...)
+              </code>
+            </li>
+          </ul>
+        </li>
+
+        <li class="homework">
+          Nakresli obrázok <em>les</em>:
+          <img src="./steps/du/1.png" alt="domáca úloha" />
+
+          V lese sa nachádza:
+          <ol>
+            <li>
+              10 stromov
+
+              <ul>
+                <li>Strom má náhodne veľkú korunu</li>
+              </ul>
+            </li>
+            <li>
+              20 tráv
+
+              <ul>
+                <li>Tráva má náhodný počet listov (napr. 3 až 10)</li>
+                <li>
+                  Listy rastú v nejakom náhodnom rozptyle od korena v x-ovom aj
+                  y-ovom smere
+                </li>
+                <li>Listy majú náhodnú hrúbku (napr. 1 až 3)</li>
+              </ul>
+            </li>
+          </ol>
+
+          <ul>
+            <li>
+              Všetky stromy aj trávy sú na náhodnej pozícií, vybehnutie z okna
+              tento raz netreba nejak extra kontrolovať
+            </li>
+            <li>Kód rozdeľ rozumne podľa vlastného uváženia do funkcií</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <div>
+          <div>
+            Vytvoril
+            <a href="mailto:michal.puskel@gmail.com">Bc. Michal Puškel</a>
+          </div>
+          <div>
+            v rámci pedagogickej praxe Doplnkového Pedagogického Štúdia
+            Informatiky FMFI UK u p. prof.
+            <span class="author">Mgr. Dany Gajdošovej.</span>
+          </div>
+        </div>
+        <div>
+          Príklady boli inšpirované učebnými materiálmi a seminármi p. prof.
+          <span class="author">RNDr. Andreja Blaha, PhD.,</span>
+          <span class="author">prof. RNDr. Ivana Kalaša, PhD.,</span>
+          <span class="author">PaedDr. Daniely Bezákovej, PhD.,</span>
+          <span class="author">RNDr. Ľudmily Jaškovej, PhD.,</span>
+          <span class="author">doc. PaedDr. Moniky Tomcsányiovej, PhD.,</span>
+          <span class="author">Mgr. Petra Kučeru</span>
+          a mnohých ďalších veľkých ľudí z MatFyzu.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
